@@ -10,3 +10,8 @@
 
 Overall works better than the xubuntu from the same image provider but still runs firefox and other
 programms not natively but as snaps which is retarded ... or not if they've compiled it only for one arm64
+
+Installing KDE-all bricked the image, so don't
+This image is slow too either due to firefox constantly doing something and using 80% of the CPU
+or running under snapd or both. apt natively installs firefox as a container so remove it (see the patches)
+
