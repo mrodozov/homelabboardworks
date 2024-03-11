@@ -16,11 +16,21 @@ burning it in .xz format leads to problems and Balena or Fedora media writer or 
 
 * **Install Gnome**: the xfce and mate are kinda retarded just install gnome. KDE bricks the image don't do it (at least this image)
 
+First remove the https://ppa.linuxfactory.or.kr records in /etc/apt/sources.list and sources.list.d
+apt-get update
+apt-get install gnome-session gdm3
+#install brave
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt update
+sudo apt install brave-browser
+sudo apt install gnome-terminal
+
 #collect the shell commands from here later for patches, make swapspace and stuff from the x86 machine
 
 * **Move to SSD drive*: leave the link here from odroid forum or shell recipe how to do it
 
-* **Install Brave**: firefox runs as snapd container just don't do it it's using a lot of CPU to do nothing
+* **Install Brave**: firefox runs as snapd container just don't do it it's using a t of CPU to do nothing
 see how to add brave repo on their site
 
 * **Stop report daemon (apport)**: Since there is always something that doesn't work correct apport is using a lot of CPU , just stop it like this:
