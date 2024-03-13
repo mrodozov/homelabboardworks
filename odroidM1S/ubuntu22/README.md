@@ -37,7 +37,14 @@ see how to add brave repo on their site
 
 https://askubuntu.com/questions/93457/how-do-i-enable-or-disable-apport
 
+* **WiFi dongles drivers**: https://github.com/ivanovborislav/rtl8188eu
+not sure if this is a fork but its a good recipe
 
+* **Install standalone Popcorn**
+
+has to be built from scratch recipe to be added 
+
+* **Kodi**: Lets first try it if it works fine on the U22
 
 
 
