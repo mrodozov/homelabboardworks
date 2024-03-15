@@ -35,6 +35,10 @@ see how to add brave repo on their site
 
 * **Stop report daemon (apport)**: Since there is always something that doesn't work correct apport is using a lot of CPU , just stop it like this:
 
+sudo systemctl stop apport.service
+systemctl daemon-reload
+sudo systemctl status apport.service # to check it
+
 https://askubuntu.com/questions/93457/how-do-i-enable-or-disable-apport
 
 * **WiFi dongles drivers**: https://github.com/ivanovborislav/rtl8188eu
