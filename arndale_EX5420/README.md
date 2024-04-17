@@ -10,7 +10,7 @@ https://stackoverflow.com/questions/23969985/cannot-start-the-linux-kernel
 checkout single branch as it's a big repo:
 git clone https://git.linaro.org/kernel/linux-linaro-tracking -b linux-linaro-tracking --single-branch
 # to be checked, write here if the 
-make olddefconfig
+make defconfig
 make ARCH=arm -j4 LOADADDR=0x20008000 uImage
 make ARCH=arm -j4 dtbs
 
