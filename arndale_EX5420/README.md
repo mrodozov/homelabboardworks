@@ -1,18 +1,23 @@
 ## homelabboardworks
 Settings and howtos/whattos for my single board computers
 
-## Odroid-M1S - Ubuntu 20 from hardkernel
+## Arndale Exynos 5420 board
+
+## Kernel build
+
+read this:
+https://stackoverflow.com/questions/23969985/cannot-start-the-linux-kernel
+checkout single branch as it's a big repo:
+git clone https://git.linaro.org/kernel/linux-linaro-tracking -b linux-linaro-tracking --single-branch
+# to be checked, write here if the 
+make olddefconfig
+make ARCH=arm -j4 LOADADDR=0x20008000 uImage
+make ARCH=arm -j4 dtbs
 
 ## Install
+mount /dev/mmcblk0p2 /mnt
+cp arch/arm/boot/uImage /mnt/uImage
+cp arch/arm/boot/dts/exynos5420-arndale-octa.dtb /mnt/board.dtb
 
-* **Built in**: The installater on the bultin eMMC is the oldest image, run 'uname -a' to see the date
 
-* **Donwloaded**: Get the image from here:
-
-https://dn.odroid.com/RK3566/ODROID-M1S/Ubuntu/
-This one has the same problem as the builtin, read how to deal with it from here:
-
-https://forum.odroid.com/viewtopic.php?f=212&t=47582
-
-Specifically do this to fix the network:
 
