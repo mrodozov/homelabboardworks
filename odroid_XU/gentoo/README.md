@@ -1,18 +1,16 @@
 ## homelabboardworks
 Settings and howtos/whattos for my single board computers
 
-## Odroid-M1S - Ubuntu 20 from hardkernel
+## Odroid-XU - Gentoo
 
 ## Install
-
-* **Built in**: The installater on the bultin eMMC is the oldest image, run 'uname -a' to see the date
+burn with dd
 
 * **Donwloaded**: Get the image from here:
+https://sourceforge.net/projects/catuodroid/
+https://sourceforge.net/projects/catuodroid/files/funtoo/funtoo-MateDesktop_armhf_odroidxu_20131215.img.xz/download
 
-https://dn.odroid.com/RK3566/ODROID-M1S/Ubuntu/
-This one has the same problem as the builtin, read how to deal with it from here:
+user: catuodroid
+pass: michel for newly burned, default for mrodozov now
 
-https://forum.odroid.com/viewtopic.php?f=212&t=47582
-
-Specifically do this to fix the network:
-
+## image on disks:
