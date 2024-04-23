@@ -1,5 +1,5 @@
 ## homelabboardworks
-65;7204;1cSettings and howtos/whattos for my single board computers
+Settings and howtos/whattos for my single board computers
 
 ## Odroid-U - Ubuntu 16 from hardkernel
 

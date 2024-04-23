@@ -1,18 +1,20 @@
 ## homelabboardworks
 Settings and howtos/whattos for my single board computers
 
-## Odroid-M1S - Ubuntu 20 from hardkernel
+## Odroid-U - Ubuntu 20 server
+
+
+* **Donwloaded**: Get the image from here:
+Get the 16 server/mate image from here:
+
+https://www.odroid.in/ubuntu_14.04lts/ubuntu-14.04lts-server-odroid-u-20140604.img.xz
+
+and update it to 20 with a little help from stackoverflow:
+https://askubuntu.com/questions/1085295/error-while-trying-to-upgrade-from-ubuntu-18-04-to-18-10-please-install-all-av
 
 ## Install
 
-* **Built in**: The installater on the bultin eMMC is the oldest image, run 'uname -a' to see the date
+## Post-install on SSD drive:
 
-* **Donwloaded**: Get the image from here:
 
-https://dn.odroid.com/RK3566/ODROID-M1S/Ubuntu/
-This one has the same problem as the builtin, read how to deal with it from here:
-
-https://forum.odroid.com/viewtopic.php?f=212&t=47582
-
-Specifically do this to fix the network:
 
