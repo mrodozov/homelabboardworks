@@ -14,6 +14,11 @@ https://askubuntu.com/questions/1085295/error-while-trying-to-upgrade-from-ubunt
 
 ## Install
 
+## Post install:
+
+- downgrade the snapd becuase it causes issues:
+sudo apt-get install snapd=2.32.5+18.04
+
 ## Post-install on SSD drive:
 
 
