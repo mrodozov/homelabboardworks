@@ -37,14 +37,15 @@ sudo su -; sudo fallocate -l 8G /swapfile ; chmod 600 /swapfile ; mkswap /swapfi
 # resize the nvme to full size later, not sure how to do it with fdisk
 
 ## Wifi drivers
-this image doesn't have builtin wifi drivers, get them from here:
-https://github.com/aircrack-ng/rtl8188eus/issues/31
-https://github.com/kimocoder/realtek_rtwifi
-for the small dongle
-
-Build:
-
-Load the drivers:
+# this image doesn't have builtin wifi drivers, get them from here:
+# enable software install from source on ubuntu soft update mgr and install the kernel headers
+# Build:
+git clone https://github.com/lwfinger/rtl8188eu
+sudo apt-get install linux-headers-5.10.0-odroid-arm64 gcc-10
+cd rtl8188eu
+make all -j 4
+sudo make install
+reboot
 
 ## NPU
 
