@@ -12,7 +12,7 @@ https://dn.odroid.com/RK3566/ODROID-M1S/Ubuntu/ubuntu-20.04-gnome-desktop-odroid
 # current version works fine and no more NIC problems.
 
 ## Install
-# burn the image on SSD card. put it in and power on
+# burn the image on sdcard. put it in and power on
 
 unxz ubuntu-20.04-gnome-desktop-odroidm1s-20240326.img.xz
 sudo dd if=ubuntu-20.04-gnome-desktop-odroidm1s-20240326.img of=/dev/mmcblk0 bs=1M status=progress
@@ -37,7 +37,7 @@ sudo su -; sudo fallocate -l 8G /swapfile ; chmod 600 /swapfile ; mkswap /swapfi
 # resize the nvme to full size later, not sure how to do it with fdisk
 
 ## Wifi drivers
-# this image doesn't have builtin wifi drivers, get them from here:
+# this image doesn't have the driver for rtl8188eu, get them from here:
 # enable software install from source on ubuntu soft update mgr and install the kernel headers
 # Build:
 git clone https://github.com/lwfinger/rtl8188eu
@@ -50,7 +50,10 @@ reboot
 ## NPU
 
 The NPU SDK is not built for this image, make use of it starting here:
-https://github.com/rockchip-linux/rknpu2
+https://github.com/airockchip/rknn-toolkit2
+Changes needed to complete the NPU kernel module and the changes in config.ini from here:
+https://wiki.odroid.com/odroid-m1s/application_note/rknpu
+for now it says the kernel module is not loaded
 
 ## Saved image on local disks
 
