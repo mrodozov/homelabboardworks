@@ -48,13 +48,11 @@ sudo make install
 reboot
 
 ## NPU
+# Use this changes for the config.ini then run the docker example. the npu works but the module needs modprobe on reboot
+https://wiki.odroid.com/odroid-m1s/application_note/yolov8
+sudo modprobe rknpu
+sudo reboot
 
-The NPU SDK is not built for this image, make use of it starting here:
-https://github.com/airockchip/rknn-toolkit2
-Changes needed to complete the NPU kernel module and the changes in config.ini from here:
-https://wiki.odroid.com/odroid-m1s/application_note/rknpu
-for now it says the kernel module is not loaded
 
 ## Saved image on local disks
-
 
