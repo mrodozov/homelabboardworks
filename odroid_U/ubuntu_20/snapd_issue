@@ -1,0 +1,59 @@
+reboot
+    2  sudo reboot
+    3  sudo nano /etc/apt/apt.conf
+    4  sudo vi /etc/apt/apt.conf
+    5  sudo do-release-upgrade
+    6  sudo apt-get remove chromium-codecs-ffmpeg-extra
+    7  sudo apt-get remove chromium-browser
+    8  sudo apt-get remove chromium-browser-l10n
+    9  export LC_CTYPE=en_US.UTF-8
+   10  export LC_ALL=en_US.UTF-8
+   11  sudo nano /etc/locale.gen
+   12  sudo vi /etc/locale.gen
+   13  sudo vim /etc/locale.gen
+   14  sudo apt-get emacs
+   15  sudo apt-get install emacs
+   16  sudo emacs -nw /etc/locale.gen
+   17  sudo locale-gen
+   18  sudo apt-get remove chromium-browser
+   19  sudo apt-get remove chromium-chromedriver
+   20  sudo apt-get remove chromium-browser
+   21  sudo do-release-upgrade
+   22  sudo apt autoremove
+   23  sudo apt-update
+   24  sudo apt-install update
+   25  sudo apt-get update
+   26  sudo apt-get upgrade
+   27  sudo do-release-upgrade
+   28  sudo apt-get update
+   29  sudo apt-get upgrade
+   30  sudo apt autoremove
+   31  sudo do-release-upgrade
+   32  apt list --upgradable
+   33  sudo apt-get upgrade -y
+   34  sudo apt dist-upgrade
+   35  reboot
+   36  sudo reboot
+   37  sudo do-release-upgrade
+   38  ifconfig
+   39  htop
+   40  top
+   41  uptime
+   42  uname -a
+   43  exit
+   44  sudo do-release-upgrade
+   45  sudo apt dist-upgrade
+   46  snap info
+   47  snapd --version
+   48  snap info
+   49  sudo apt-get install snapd=2.32.5+18.04
+   50  sudo apt autoremove
+   51  reboot
+   52  sudo reboot
+   53  ping google.com
+   54  ifconfig
+   55  sudo apt-get update
+   56  sudo apt-get upgrade
+   57  sudo apt-get upgrade --fix-missing
+   58  ifconfig
+   59  history
