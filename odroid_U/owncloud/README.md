@@ -8,6 +8,10 @@ Settings and howtos/whattos for my single board computers
 # https://doc.owncloud.com/server/next/admin_manual/installation/docker/#docker-compose-yaml-file
 # the containers are not the default 
 
+#redis container:
+
+#mariadb container for arm32:
+
 version: "3"
 
 volumes:

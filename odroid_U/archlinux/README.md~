@@ -1,14 +1,14 @@
 ## homelabboardworks
 Settings and howtos/whattos for my single board computers
 
-## Odroid-U - Ubuntu 20 server
+## Odroid-U - archlinux kernel 6.14
 
 * **Donwloaded**: Get the image from here:
-https://github.com/RKaczmarek/imagebuilder/releases/download/0.0.1/odroid_u3-armv7l-ubuntu20.04minimal-1601403301.zip
+http://os.archlinuxarm.org/os/ArchLinuxARM-odroid-latest.tar.gz
+# read this https://archlinuxarm.org/platforms/armv7/samsung/odroid-u2
 
 ## Install
 unzip -e odroid_u3-armv7l-ubuntu20.04minimal-1601403301.zip
-
 
 ## Post install:
 sudo apt-get install curl wget
