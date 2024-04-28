@@ -31,7 +31,7 @@ sudo dd	if=/dev/mmcblk0p2 of=/dev/nvme0n1p1 bs=1M status=progress
 sudo fdisk /dev/mmcblk0p2 # delete the rootrf partition from the emmc
 
 #Swap space, 8GB is enough
-sudo su -; sudo fallocate -l 8G /swapfile ; chmod 600 /swapfile ; mkswap /swapfile ; swapon /swapfile ; free -m; exit
+sudo su -; sudo fallocate -l 8G /swapfile ; chmod 600 /swapfile ; mkswap /swapfile ; swapon /swapfile ; echo "/swapfile swap swap defaults 0 0" >> /etc/fstab ; free -m; exit
 
 # reboot with the sdcard removed, should have only 250MB on the emmc and 1TB nvme with the OS on it
 # resize the nvme to full size later, not sure how to do it with fdisk

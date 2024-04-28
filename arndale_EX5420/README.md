@@ -3,21 +3,13 @@ Settings and howtos/whattos for my single board computers
 
 ## Arndale Exynos 5420 board
 
-## Kernel build
+## Kernel img from linaro, burned on ssd and working:
+https://releases.linaro.org/archive/14.02/ubuntu/boards/arndale-octa/arndale-octa-saucy_server_20140222-611.img.gz
 
-read this:
-https://stackoverflow.com/questions/23969985/cannot-start-the-linux-kernel
-checkout single branch as it's a big repo:
-git clone https://git.linaro.org/kernel/linux-linaro-tracking -b linux-linaro-tracking --single-branch
-# to be checked, write here if the 
-make defconfig
-make ARCH=arm -j4 LOADADDR=0x20008000 uImage
-make ARCH=arm -j4 dtbs
+## Install - dd the image on SSD
+gunzip arndale-octa-saucy_server_20140222-611.img.gz
+dd if=arndale-octa-saucy_server_20140222-611.img of=/dev/sdc bs=4096 status=progress
 
-## Install
-mount /dev/mmcblk0p2 /mnt
-cp arch/arm/boot/uImage /mnt/uImage
-cp arch/arm/boot/dts/exynos5420-arndale-octa.dtb /mnt/board.dtb
+## there is nothing installed on this not even sshd, it is trying to update from ubuntu sources tho
 
-
-
+## Images on local disk:
