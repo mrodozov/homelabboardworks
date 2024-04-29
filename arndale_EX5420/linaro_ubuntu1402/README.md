@@ -15,4 +15,8 @@ boot
 
 ## there is nothing installed on this not even sshd, it is trying to update from ubuntu sources tho
 
-## Images on local disk:
+# Post-install
+# change apt sources to archive
+
+## Images on local disk: 960GB disk
+arndale_images/linaro_ubuntu_1402/arndale-octa-saucy_server_20140222-611.img.gz
