@@ -55,4 +55,4 @@ sudo reboot
 
 
 ## Saved image on local disks
-
+odroid_images/odroid_m1s/ubuntu-20.04-gnome-desktop-odroidm1s-20240326.img

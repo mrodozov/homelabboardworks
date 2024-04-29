@@ -10,6 +10,9 @@ https://releases.linaro.org/archive/14.02/ubuntu/boards/arndale-octa/arndale-oct
 gunzip arndale-octa-saucy_server_20140222-611.img.gz
 dd if=arndale-octa-saucy_server_20140222-611.img of=/dev/sdc bs=4096 status=progress
 
+#at arndale prompt manually say
+boot
+
 ## there is nothing installed on this not even sshd, it is trying to update from ubuntu sources tho
 
 ## Images on local disk:

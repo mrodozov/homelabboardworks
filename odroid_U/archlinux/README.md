@@ -15,4 +15,5 @@ unzip -e odroid_u3-armv7l-ubuntu20.04minimal-1601403301.zip
 pacman -Sy
 pacman -S docker docker-compose
 
-## Image location on disks
+## Image location on disks: 960GB disk
+odroid_images/odroid_u/ArchLinuxARM-odroid-latest.tar.gz

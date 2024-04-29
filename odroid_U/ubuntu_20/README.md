@@ -28,5 +28,7 @@ sudo apt-get update
 
 ## Post-install on SSD drive:
 
+#Image location on local drive: 960 GB drive
+odroid_images/odroid_u/odroid_u3-armv7l-ubuntu20.04minimal-1601403301.zip
 
 
