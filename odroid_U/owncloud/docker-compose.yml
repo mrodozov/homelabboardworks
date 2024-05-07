@@ -1,5 +1,3 @@
-version: "3"
-
 volumes:
   files:
     driver: local
@@ -11,10 +9,10 @@ volumes:
 services:
   owncloud:
     image: owncloud/server:${OWNCLOUD_VERSION}
-    container_name: ${OC_DB_CONTAINER_NAME}
+    container_name: ${OC_CONTAINER_NAME}
     restart: always
     ports:
-      - ${HTTP_PORT}:8080
+      - ${OC_HTTP_PORT}:8080
     depends_on:
       - mariadb
       - redis
@@ -26,8 +24,8 @@ services:
       - OWNCLOUD_DB_USERNAME=${OWNCLOUD_DB_USERNAME}
       - OWNCLOUD_DB_PASSWORD=${OWNCLOUD_DB_PASSWORD}
       - OWNCLOUD_DB_HOST=${OWNCLOUD_DB_HOST}
-      - OWNCLOUD_ADMIN_USERNAME=${ADMIN_USERNAME}
-      - OWNCLOUD_ADMIN_PASSWORD=${ADMIN_PASSWORD}
+      - OWNCLOUD_ADMIN_USERNAME=${OC_ADMIN_USERNAME}
+      - OWNCLOUD_ADMIN_PASSWORD=${OC_ADMIN_PASSWORD}
       - OWNCLOUD_MYSQL_UTF8MB4=${OWNCLOUD_MYSQL_UTF8MB4}
       - OWNCLOUD_REDIS_ENABLED=${OWNCLOUD_REDIS_ENABLED}
       - OWNCLOUD_REDIS_HOST=${OWNCLOUD_REDIS_HOST}
@@ -41,7 +39,7 @@ services:
 
   mariadb:
     image: yobasystems/alpine-mariadb:10.11.6
-    container_name: owncloud_mariadb
+    container_name: ${OC_DB_CONTAINER_NAME}
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
