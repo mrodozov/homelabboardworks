@@ -42,10 +42,10 @@ services:
     container_name: ${OC_DB_CONTAINER_NAME}
     restart: always
     environment:
-      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
-      - MYSQL_USER=${MYSQL_USER}
-      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_ROOT_PASSWORD=${OC_MYSQL_ROOT_PASSWORD}
+      - MYSQL_USER=${OC_MYSQL_USER}
+      - MYSQL_PASSWORD=${OC_MYSQL_PASSWORD}
+      - MYSQL_DATABASE=${OC_MYSQL_DATABASE}
       - MARIADB_AUTO_UPGRADE=${MARIADB_AUTO_UPGRADE}
     command: ["--max-allowed-packet=128M", "--innodb-log-file-size=64M"]
     healthcheck:
