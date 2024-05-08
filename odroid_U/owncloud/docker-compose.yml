@@ -8,27 +8,27 @@ volumes:
 
 services:
   owncloud:
-    image: owncloud/server:${OWNCLOUD_VERSION}
+    image: owncloud/server:${OC_VERSION}
     container_name: ${OC_CONTAINER_NAME}
     restart: always
     ports:
-      - ${OC_HTTP_PORT}:8080
+      - ${HTTP_PORT}:8080
     depends_on:
       - mariadb
       - redis
     environment:
-      - OWNCLOUD_DOMAIN=${OWNCLOUD_DOMAIN}
-      - OWNCLOUD_TRUSTED_DOMAINS=${OWNCLOUD_TRUSTED_DOMAINS}
-      - OWNCLOUD_DB_TYPE=${OWNCLOUD_DB_TYPE}
-      - OWNCLOUD_DB_NAME=${OWNCLOUD_DB_NAME}
-      - OWNCLOUD_DB_USERNAME=${OWNCLOUD_DB_USERNAME}
-      - OWNCLOUD_DB_PASSWORD=${OWNCLOUD_DB_PASSWORD}
-      - OWNCLOUD_DB_HOST=${OWNCLOUD_DB_HOST}
+      - OWNCLOUD_DOMAIN=${OC_DOMAIN}
+      - OWNCLOUD_TRUSTED_DOMAINS=${OC_TRUSTED_DOMAINS}
+      - OWNCLOUD_DB_TYPE=mysql
+      - OWNCLOUD_DB_NAME=${OC_DB_NAME}
+      - OWNCLOUD_DB_USERNAME=${OC_DB_USERNAME}
+      - OWNCLOUD_DB_PASSWORD=${OC_DB_PASSWORD}
+      - OWNCLOUD_DB_HOST=mariadb
       - OWNCLOUD_ADMIN_USERNAME=${OC_ADMIN_USERNAME}
       - OWNCLOUD_ADMIN_PASSWORD=${OC_ADMIN_PASSWORD}
-      - OWNCLOUD_MYSQL_UTF8MB4=${OWNCLOUD_MYSQL_UTF8MB4}
-      - OWNCLOUD_REDIS_ENABLED=${OWNCLOUD_REDIS_ENABLED}
-      - OWNCLOUD_REDIS_HOST=${OWNCLOUD_REDIS_HOST}
+      - OWNCLOUD_MYSQL_UTF8MB4=${OC_MYSQL_UTF8MB4}
+      - OWNCLOUD_REDIS_ENABLED=${OC_REDIS_ENABLED}
+      - OWNCLOUD_REDIS_HOST=redis
     healthcheck:
       test: ["CMD", "/usr/bin/healthcheck"]
       interval: 30s
@@ -38,7 +38,7 @@ services:
       - files:/mnt/data
 
   mariadb:
-    image: yobasystems/alpine-mariadb:10.11.6
+    image: yobasystems/alpine-mariadb:latest
     container_name: ${OC_DB_CONTAINER_NAME}
     restart: always
     environment:
@@ -46,7 +46,7 @@ services:
       - MYSQL_USER=${OC_MYSQL_USER}
       - MYSQL_PASSWORD=${OC_MYSQL_PASSWORD}
       - MYSQL_DATABASE=${OC_MYSQL_DATABASE}
-      - MARIADB_AUTO_UPGRADE=${MARIADB_AUTO_UPGRADE}
+      - MARIADB_AUTO_UPGRADE=${OC_MARIADB_AUTO_UPGRADE}
     command: ["--max-allowed-packet=128M", "--innodb-log-file-size=64M"]
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-u", "root", "--password=${OC_DB_CLI_PASSWORD}"]
