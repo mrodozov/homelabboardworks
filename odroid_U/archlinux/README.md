@@ -1,6 +1,9 @@
 ## homelabboardworks
 Settings and howtos/whattos for my single board computers
 
+users: default and root
+pass: user default and root default
+
 ## Odroid-U - archlinux kernel 6.14
 
 * **Donwloaded**: Get the image from here:

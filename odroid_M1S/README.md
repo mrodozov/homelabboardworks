@@ -1,6 +1,9 @@
 ## homelabboardworks
 Settings and howtos/whattos for my single board computers
 
+users: default and root
+pass: user default and root default
+
 ## Odroid-M1S - Ubuntu 20 from hardkernel
 
 ## Install
@@ -17,3 +20,4 @@ https://forum.odroid.com/viewtopic.php?f=212&t=47582
 Specifically do this to fix the network:
 
 ## Currently used: ubuntu_20
+

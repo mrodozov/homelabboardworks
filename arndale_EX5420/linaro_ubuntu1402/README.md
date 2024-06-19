@@ -1,6 +1,9 @@
 ## homelabboardworks
 Settings and howtos/whattos for my single board computers
 
+users: default and root
+pass: fix the passes
+
 ## Arndale Exynos 5420 board
 
 ## Kernel img from linaro, burned on ssd and working:
