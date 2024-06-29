@@ -10,4 +10,4 @@ Settings and howtos/whattos for my single board computers
 
 # setup https:
 
-# 
+# permanent IP - check the setup of the forward router it's in the permanent list
