@@ -1,22 +1,34 @@
-## homelabboardworks
-Settings and howtos/whattos for my single board computers
-
-users: default and root
-pass: user default and root default
-
 ## Odroid-U - archlinux kernel 6.14
 
-* **Donwloaded**: Get the image from here:
+<details>
+<summary>Download</summary>
+<br>
+[Image](http://os.archlinuxarm.org/os/ArchLinuxARM-odroid-latest.tar.gz)
+<br>
+read this https://archlinuxarm.org/platforms/armv7/samsung/odroid-u2 for more about this image
+</details>
+<details>
+<summary>Install</summary>
+<br>
 http://os.archlinuxarm.org/os/ArchLinuxARM-odroid-latest.tar.gz
-# read this https://archlinuxarm.org/platforms/armv7/samsung/odroid-u2
+<br>
+[Read this](https://archlinuxarm.org/platforms/armv7/samsung/odroid-u2 for more about this image)
+</details>
+<details>
+<summary>Users</summary>
+<br>
+users: default and root
+<br>
+pass: user default and root default
+</details>
 
-## Install
-unzip -e odroid_u3-armv7l-ubuntu20.04minimal-1601403301.zip
-
-## Post install:
-# as root
+<details>
+<summary>Post install</summary>
 pacman -Sy
 pacman -S docker docker-compose
+</details>
 
-## Image location on disks: 960GB disk
-odroid_images/odroid_u/ArchLinuxARM-odroid-latest.tar.gz
+<details>
+<summary>Image local storage</summary>
+960 GB disk, odroid_images/odroid_u/ArchLinuxARM-odroid-latest.tar.gz
+</details>
