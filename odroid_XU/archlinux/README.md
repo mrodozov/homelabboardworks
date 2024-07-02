@@ -24,15 +24,12 @@ https://archlinuxarm.org/forum/viewtopic.php?f=47&t=15645 <br>
 1. Comment this line in /boot/boot.ini <br>
 #setenv fdt_high "0xffffffff" <br>
 2. Use the UUIDs of the two partitions in /etc/fstab <br>
-```
-# Static information about the filesystems.
-# See fstab(5) for details.
-
-# <file system> <dir> <type> <options> <dump> <pass>
+```text
 UUID=2577-D534					/boot   vfat    defaults        0       0
 UUID=23fae9aa-a78e-4201-8330-6c23890cc910	/	ext4    defaults        0       0
 ```
-instead of assuming the mmc numbering
+<br>
+instead of assuming the mmc numbering 
 
 </details>
 
