@@ -1,14 +1,34 @@
-## homelabboardworks
-Settings and howtos/whattos for my single board computers
+## Odroid-XU - archlinux kernel 6.11
 
-## Odroid-XU - Arch linux
+<details>
+<summary>Download</summary>
+<br>
+[Image]http://os.archlinuxarm.org/os/ArchLinuxARM-odroid-xu-latest.tar.gz
+<br>
+</details>
+<details>
+<summary>Install</summary>
+<br>
+read this https://archlinuxarm.org/platforms/armv7/samsung/odroid-xu
+and complete the "installation" section 
+<br>
+for more about this image
+</details>
+<details>
 
-* **Donwloaded**: Get the image from here:
-wget http://os.archlinuxarm.org/os/ArchLinuxARM-odroid-xu-latest.tar.gz
+<summary>Users</summary>
+<br>
+users: default and root
+<br>
+pass: user default and root default
+</details>
 
-## Install
+<details>
+<summary>Post install</summary>
 
-https://archlinuxarm.org/platforms/armv7/samsung/odroid-xu
+</details>
 
-## Image on local disc: 960GB disk:
-odroid_images/odroid_x/ArchLinuxARM-odroid-xu-latest.tar.gz
+<details>
+<summary>Image local storage</summary>
+960 GB disk, odroid_images/odroid_xu/ArchLinuxARM-odroid-xu-latest.tar.gz
+</details>
