@@ -1,18 +1,31 @@
-## Odroid-U - archlinux kernel 6.14
+## Odroid-U - archlinux kernel 6.7
 
 <details>
 <summary>Download</summary>
 <br>
-[Image](http://os.archlinuxarm.org/os/ArchLinuxARM-odroid-latest.tar.gz)
+Image: http://os.archlinuxarm.org/os/ArchLinuxARM-odroid-latest.tar.gz
 <br>
-read this https://archlinuxarm.org/platforms/armv7/samsung/odroid-u2 for more about this image
+read this https://archlinuxarm.org/platforms/armv7/samsung/odroid-u2
+the overview section
 </details>
 <details>
 <summary>Install</summary>
 <br>
 http://os.archlinuxarm.org/os/ArchLinuxARM-odroid-latest.tar.gz
 <br>
-[Read this](https://archlinuxarm.org/platforms/armv7/samsung/odroid-u2 for more about this image)
+Finish the https://archlinuxarm.org/platforms/armv7/samsung/odroid-u2 <br>
+installation section <br>
+Then this thread: https://forum.odroid.com/viewtopic.php?t=1522 <br>
+and install <br>
+```
+pacman-key --init
+pacman-key --populate archlinuxarm
+pacman -S uboot-tools
+```
+</details>
+<summary>Move to SSD and use the SD card for boot and keeping the kernel</summary>
+<details>
+
 </details>
 <details>
 <summary>Users</summary>
