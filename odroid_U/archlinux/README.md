@@ -103,6 +103,16 @@ as root to see of both /dev/mmcblk* and /dev/sd* are mounted. The rootfs should 
 /dev/sda1 on / type ext4 (rw,relatime)
 ```
 
+If the rootfs is now on the SSD, only mapping the /boot from the SD card remains. <br>
+With blkid see the UUID of the SD card, and add it to the new /etc/fstab which is now on the SSD: <br>
+
+```shell
+UUID=30130f54-edfa-495f-8fe1-48424d141754     /mnt/emmc   ext4    rw,user,auto    0    0
+/mnt/emmc/boot /boot/ none defaults,bind 0 0
+```
+
+This way, the kernel gets updated onto the SD/emmc card, everything else on the SSD <br>
+
 </details>
 <details>
 <summary>Users</summary>
@@ -114,6 +124,8 @@ pass: user default and root default
 
 <details>
 <summary>Post install</summary>
+pacman-key --init
+pacman-key --populate archlinuxarm
 pacman -Sy
 pacman -S docker docker-compose
 </details>
