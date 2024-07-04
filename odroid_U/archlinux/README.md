@@ -124,10 +124,14 @@ pass: user default and root default
 
 <details>
 <summary>Post install</summary>
+
+```shell
 pacman-key --init
 pacman-key --populate archlinuxarm
 pacman -Sy
 pacman -S docker docker-compose
+```
+
 </details>
 
 <details>
