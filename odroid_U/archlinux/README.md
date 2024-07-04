@@ -46,10 +46,62 @@ Copy the rootfs part to the emmc/SD, to keep only the boot and the kernel on the
 ```shell
 cd /
 rsync -av * /mnt/SSD
+# remove the boot dir from the SSD copy:
+rm -rf /mnt/boot
 ```
 
-Change the /boot/boot.src with the mkscr script: <br>
+Add a line in /etc/fstab with the UUID of the SSD drive, like this one, with the UUID from the blkid command: <br>
 
+```shell
+UUID=7d1436c0-a73b-462c-a59e-36701c6a85ce     /   ext4    rw,user,auto    0    0
+```
+
+Copy the /boot/boot.src to a backup and then change it to use the SSD <br>
+and the /boot/boot.txt to /boot/boot.txt.bk
+
+```shell
+cp /boot/boot.src /boot/boot.src.bak
+cp /boot/boot.txt /boot/boot.txt.bak
+```
+
+remove this line from /boot/boot.txt <br>
+
+```shell
+part uuid ${devtype} ${devnum}:${bootpart} uuid
+```
+
+change this line: <br>
+
+```shell
+setenv bootargs "console=tty1 console=${console} root=PARTUUID=${uuid} rw rootwait smsc95xx.macaddr=${macaddr}"
+```
+
+like this: <br>
+
+```shell
+setenv bootargs "console=tty1 console=${console} root=PARTUUID=9d5603b3-01 rw rootwait smsc95xx.macaddr=${macaddr}"
+```
+
+where the PARTUUID value from whatever blkid in the command above returned for the SSD disk <br>
+Change the /boot/boot.src with this, also find in the mkscr script: <br>
+
+```shell
+mkimage -A arm -T script -C none -n "hdd bscr" -d boot.txt boot.scr
+```
+
+which will rewrite the boot.scr and also will write the /etc/fstab as it is<br>
+
+Then reboot to see if the SSD is mounting, and type <br>
+
+```shell
+mount
+```
+
+as root to see of both /dev/mmcblk* and /dev/sd* are mounted. The rootfs should be on the SSD, like this<br>
+
+```shell
+/dev/sda1 on / type ext4 (rw,relatime)
+```
 
 </details>
 <details>
